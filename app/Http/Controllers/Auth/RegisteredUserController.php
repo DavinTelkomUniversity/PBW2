@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 class RegisteredUserController extends Controller
 {
@@ -59,8 +61,12 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        Auth::login($user);
-
-        return redirect(RouteServiceProvider::HOME);
+        if (url()->current() == route('register')) {
+            Auth::login($user);
+            return redirect(RouteServiceProvider::HOME);
+        } else {
+            Session::flash('success', 'User berhasil ditambahkan!');
+            return redirect()->route('user.registrasi');
+        }
     }
 }

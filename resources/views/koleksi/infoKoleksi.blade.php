@@ -11,7 +11,9 @@
                 <div class="p-6">
                     <a href="#" class="btn btn-dark" onclick="goBack()">Back</a><br><br>
                     <p>Nama Koleksi: {{ $koleksi->namaKoleksi }}</p>
-                    <p>Registered: {{ $koleksi->created_at }}</p>
+                    <p>Jenis Koleksi: {{ $koleksi->jenisKoleksi }}</p>
+                    <p>Jumlah Koleksi: {{ $koleksi->jumlahKoleksi }}</p>
+                    <p>Ditambahkan: {{ $koleksi->created_at }}</p>
                 </div>
             </div>
         </div>
