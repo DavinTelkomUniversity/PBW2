@@ -5,6 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 
+/*
+|
+| Nama  : Davin Wahyu Wardana
+| NIM   : 6706223003
+| Kelas : D3IF-4603
+|
+*/
+
 class UserController extends Controller
 {
     public function index() {
@@ -20,15 +28,5 @@ class UserController extends Controller
     public function create()
     {
     return view('user.registrasi');
-    }
-
-    public function store(Request $request)
-    {
-        
-    }
-
-    public function show()
-    {
-        
     }
 }

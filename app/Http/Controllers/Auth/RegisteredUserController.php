@@ -58,7 +58,13 @@ class RegisteredUserController extends Controller
             'religion' => $request->religion,
             'gender' => $request->gender,
         ]);
-
+/*
+|
+| Nama  : Davin Wahyu Wardana
+| NIM   : 6706223003
+| Kelas : D3IF-4603
+|
+*/
         event(new Registered($user));
 
         if (url()->current() == route('register')) {

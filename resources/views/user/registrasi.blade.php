@@ -14,6 +14,13 @@
                     {{ Session::get('success') }}
                 </div>
                 @endif
+
+<!-- 
+| Nama  : Davin Wahyu Wardana
+| NIM   : 6706223003
+| Kelas : D3IF-4603 
+-->
+
                     <!-- Formulir Penambahan Koleksi -->
                     <form action="{{ route('user.store') }}" method="POST">
                         @csrf

@@ -18,7 +18,13 @@ class KoleksiController extends Controller
         $koleksi = Koleksi::findOrFail($id);
         return view('koleksi.infoKoleksi', compact('koleksi'));
     }
-
+/*
+|
+| Nama  : Davin Wahyu Wardana
+| NIM   : 6706223003
+| Kelas : D3IF-4603
+|
+*/
     public function create()
     {
     return view('koleksi.registrasi');
