@@ -30,7 +30,7 @@
                                 <tr>
                                     <td class="border px-4 py-2">{{ $key + 1 }}</td>
                                     <td class="border px-4 py-2">{{ $koleksii->namaKoleksi }}</td>
-                                    <td class="border px-4 py-2">{{ $koleksii->jenisKoleksi }}</td>
+                                    <td class="border px-4 py-2">{{ ($koleksii->jenisKoleksi == 1) ? 'Buku' : (($koleksii->jenisKoleksi == 2) ? 'Majalah' : 'Cakram Digital') }}</td>
                                     <td class="border px-4 py-2">{{ $koleksii->jumlahKoleksi }}</td>
                                     <td class="border px-4 py-2">{{ $koleksii->created_at }}</td>
                                     <td class="border px-4 py-2">

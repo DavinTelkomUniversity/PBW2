@@ -28,10 +28,16 @@
                         </div>
 
                         <!-- Jenis Koleksi -->
-                        <div class="mb-4">
-                            <label for="jenisKoleksi" class="block text-sm font-medium text-gray-600">Jenis Koleksi</label>
-                            <input type="number" name="jenisKoleksi" id="jenisKoleksi" class="mt-1 p-2 border rounded-md w-full" required>
-                        </div>
+                        <div class="mt-4">
+                            <x-input-label for="jenisKoleksi" :value="__('Jenis Koleksi')" />
+                            <select id="jenisKoleksi" name="jenisKoleksi" class="block mt-1 w-full" required autofocus>
+                                <option value="{{ old('jenisKoleksi') == '' ? '' : old('jenisKoleksi') }}" {{ old('jenisKoleksi') == '' ? 'selected' : '' }}>{{ old('jenisKoleksi') == '' ? 'Select one...' :  (old('jenisKoleksi') == 1 ? 'Buku (Selected)' : (old('jenisKoleksi') == 2 ? 'Majalah (Selected)' : 'Cakram Digital (Selected)')) }}</option>
+                                <option value="1">Buku</option>
+                                <option value="2">Majalah</option>
+                                <option value="3">Cakram Digital</option>
+                            </select>
+                            <x-input-error :messages="$errors->get('jenisKoleksi')" class="mt-2" />
+                        </div><br>
 
                         <!-- Jumlah Koleksi -->
                         <div class="mb-4">
