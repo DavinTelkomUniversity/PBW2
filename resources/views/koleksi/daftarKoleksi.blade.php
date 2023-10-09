@@ -14,7 +14,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <a href="{{ route('koleksi.registrasi') }}" class="btn btn-icon btn-dark">Tambah</a><br><br>
-                    <table class="min-w-full table-auto">
+                    <table class="min-w-full table-auto"> 
                         <thead>
                             <tr class="bg-gray-100">
                                 <th class="border px-4 py-2">No</th>

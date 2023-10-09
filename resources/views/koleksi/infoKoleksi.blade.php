@@ -4,7 +4,7 @@
             {{ __('Informasi Koleksi') }}
         </h2>
     </x-slot>
-<!-- 
+<!--  
 | Nama  : Davin Wahyu Wardana
 | NIM   : 6706223003
 | Kelas : D3IF-4603 
