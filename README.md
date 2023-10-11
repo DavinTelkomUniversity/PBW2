@@ -1,3 +1,33 @@
+<p align="center"><a href="https://davin.id" target="_blank"><img src="https://davin.id/assets/images/logo/app.png" width="200" alt="Davin Logo"></a></p>
+
+## Information
+
+Name        : Davin Wahyu Wardana
+
+NIM         : 6706223003
+
+Kelas       : D3IF-4603
+
+Portofolio  : [davinwardana.com](https://davinwardana.com)
+
+## UI/X
+
+<p align="center">
+<img src="https://i.ibb.co/XWLNszM/1.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/0YcSN3n/2.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/bdT4fwH/3.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/gzzD8J8/4.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/TKWbwYh/5.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/9n6Wwwv/6.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/nM8wDnf/7.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/L05r0tx/8.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/gzG1T4T/9.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/r5Hzq8Y/10.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/h2NwWYV/11.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/5W6jbV8/12.png" width="200" alt="Laravel Logo"></p>
+
+##
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

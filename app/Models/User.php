@@ -13,14 +13,23 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
-     * The attributes that are mass assignable.
+     * Run the migrations.
+     * Nama     : Davin Wahyu Wardana
+     * NIM      : 6706223003
+     * Kelas    : 4603
      *
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'username',
+        'fullname',
         'email',
         'password',
+        'address',
+        'phoneNumber',
+        'birthdate',
+        'religion',
+        'gender'
     ];
 
     /**

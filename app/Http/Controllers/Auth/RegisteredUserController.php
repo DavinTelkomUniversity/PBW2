@@ -25,26 +25,41 @@ class RegisteredUserController extends Controller
 
     /**
      * Handle an incoming registration request.
-     *
+     * Nama     : Davin Wahyu Wardana
+     * NIM      : 6706223003
+     * Kelas    : 4603
      * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'username' => ['required', 'string', 'max:100'],
+            'fullname' => ['required', 'string', 'max:100'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'address' => ['required', 'string', 'max:100'],
+            'birthdate' => ['required', 'date'],
+            'phonenumber' => ['required', 'string', 'max:20'],
+            'religion' => ['required', 'string', 'max:20'],
+            'gender' => ['required', 'integer', 'min:0', 'max:1'],
+            // 0 male, 1 female
         ]);
 
         $user = User::create([
-            'name' => $request->name,
+            'username' => $request->username,
+            'fullname' => $request->fullname,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'address' => $request->address,
+            'birthdate' => $request->birthdate,
+            'phoneNumber' => $request->phonenumber,
+            'religion' => $request->religion,
+            'gender' => $request->gender,
         ]);
 
         event(new Registered($user));
 
-        // Auth::login($user);
+        Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);
     }
