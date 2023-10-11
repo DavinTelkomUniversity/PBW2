@@ -29,13 +29,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
-    Route::post('/userStore', [UserController::class, 'store(Request $request)'])->name('user.daftarPengguna');
+ 
+    Route::post('/userStore', [RegisteredUserController::class, 'store'])->name('user.store');
     Route::get('/user', [UserController::class, 'index'])->name('user.daftarPengguna');
-    Route::get('/userRegistration', [RegisteredUserController::class, 'create'])->name('user.registrasi');
+    Route::get('/userRegistration', [UserController::class, 'create'])->name('user.registrasi');
     Route::get('/userView/{username}', [UserController::class, 'showUser'])->name('user.infoPengguna');
 
-    Route::post('/koleksiStore', [KoleksiController::class, 'store(Request $request)'])->name('koleksi.daftarKoleksi');
+    Route::post('/koleksiStore', [KoleksiController::class, 'store'])->name('koleksi.store');
     Route::get('/koleksi', [KoleksiController::class, 'index'])->name('koleksi.daftarKoleksi');
     Route::get('/koleksiTambah', [KoleksiController::class, 'create'])->name('koleksi.registrasi');
     Route::get('/koleksiView/{id}', [KoleksiController::class, 'show'])->name('koleksi.infoKoleksi');

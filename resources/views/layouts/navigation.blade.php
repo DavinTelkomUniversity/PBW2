@@ -17,17 +17,12 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('user.registrasi')" :active="request()->routeIs('user.registrasi')">
-                        {{ __('Register') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('koleksi.daftarKoleksi')" :active="request()->routeIs('koleksi.daftarKoleksi')">
+                    <x-nav-link :href="route('koleksi.daftarKoleksi')" :active="request()->routeIs('koleksi.daftarKoleksi') || request()->routeIs('koleksi.registrasi') || request()->routeIs('koleksi.infoKoleksi')">
                         {{ __('Koleksi') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('user.daftarPengguna')" :active="request()->routeIs('user.daftarPengguna')">
+                    <x-nav-link :href="route('user.daftarPengguna')" :active="request()->routeIs('user.daftarPengguna') || request()->routeIs('user.registrasi') || request()->routeIs('user.infoPengguna')">
                         {{ __('User') }}
                     </x-nav-link>
                 </div>
