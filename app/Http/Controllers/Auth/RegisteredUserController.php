@@ -12,8 +12,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Redirect;
 
 class RegisteredUserController extends Controller
 {
@@ -58,21 +56,11 @@ class RegisteredUserController extends Controller
             'religion' => $request->religion,
             'gender' => $request->gender,
         ]);
-/*
-|
-| Nama  : Davin Wahyu Wardana
-| NIM   : 6706223003
-| Kelas : D3IF-4603
-|
-*/
+
         event(new Registered($user));
 
-        if (url()->current() == route('register')) {
-            Auth::login($user);
-            return redirect(RouteServiceProvider::HOME);
-        } else {
-            Session::flash('success', 'User berhasil ditambahkan!');
-            return redirect()->route('user.registrasi');
-        }
+        Auth::login($user);
+
+        return redirect(RouteServiceProvider::HOME);
     }
 }

@@ -73,7 +73,7 @@
         <div class="mt-4">
             <x-input-label for="religion" :value="__('Religion')" />
             <select id="religion" name="religion" class="block mt-1 w-full" required autofocus>
-                <option value="{{ old('religion') == '' ? '' : old('religion') }}" {{ old('religion') == '' ? 'selected' : '' }}>{{ old('religion') == '' ? 'Select one...' : old('religion').' (Selected)' }}</option>
+                <option value="" selected>Select one...</option>
                 <option value="Islam">Islam</option>
                 <option value="Kristen">Kristen</option>
                 <option value="Katolik">Katolik</option>
@@ -88,7 +88,7 @@
         <div class="mt-4">
             <x-input-label for="gender" :value="__('Gender')" />
             <select id="gender" name="gender" class="block mt-1 w-full" required autofocus>
-                <option value="{{ old('gender') == '' ? '' : old('gender') }}" {{ old('gender') == '' ? 'selected' : '' }}>{{ old('gender') == '' ? 'Select one...' : (old('gender') == 1 ? 'Laki-Laki (Selected)' : 'Perempuan (Selected)') }}</option>
+                <option value="" selected>Select one...</option>
                 <option value="1">Laki-Laki</option>
                 <option value="0">Perempuan</option>
             </select>
