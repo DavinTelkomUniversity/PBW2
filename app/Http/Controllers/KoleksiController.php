@@ -13,6 +13,7 @@ class KoleksiController extends Controller
     //     $koleksi = Koleksi::all();
     //     return view('koleksi.daftarKoleksi', compact('koleksi'));
     // }
+
     public function index(KoleksiDataTable $dataTable)
     {
         return $dataTable->render('koleksi.daftarKoleksi');

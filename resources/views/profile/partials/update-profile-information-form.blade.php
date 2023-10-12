@@ -1,3 +1,4 @@
+@section('content')
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900">
@@ -8,7 +9,6 @@
             {{ __("Update your account's profile information and email address.") }}
         </p>
     </header>
-
     <form id="send-verification" method="post" action="{{ route('verification.send') }}">
         @csrf
     </form>
@@ -73,4 +73,5 @@
             @endif
         </div>
     </form>
+@endsection
 </section>

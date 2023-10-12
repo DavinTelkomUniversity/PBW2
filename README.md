@@ -16,7 +16,15 @@ Portofolio  : [davinwardana.com](https://davinwardana.com)
 <img src="https://i.ibb.co/XWLNszM/1.png" width="200" alt="Laravel Logo"> 
 <img src="https://i.ibb.co/0YcSN3n/2.png" width="200" alt="Laravel Logo"> 
 <img src="https://i.ibb.co/bdT4fwH/3.png" width="200" alt="Laravel Logo"> 
-</p>
+<img src="https://i.ibb.co/gzzD8J8/4.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/TKWbwYh/5.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/9n6Wwwv/6.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/nfn3yqF/7.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/L05r0tx/8.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/gzG1T4T/9.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/r5Hzq8Y/10.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/pK88q78/11.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/5W6jbV8/12.png" width="200" alt="Laravel Logo"></p>
 
 ##
 
