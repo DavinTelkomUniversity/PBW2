@@ -12,6 +12,9 @@ use Yajra\DataTables\Services\DataTable;
  
 class UserDataTable extends DataTable
 {
+    // Nama    : Davin Wahyu Wardana
+    // NIM     : 6706223003
+    // Kelas   : D3IF-4603
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))

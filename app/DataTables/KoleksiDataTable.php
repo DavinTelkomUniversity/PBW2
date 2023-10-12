@@ -19,6 +19,9 @@ class KoleksiDataTable extends DataTable
      *
      * @param QueryBuilder $query Results from query() method.
      */
+    // Nama    : Davin Wahyu Wardana
+    // NIM     : 6706223003
+    // Kelas   : D3IF-4603
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))

@@ -4,7 +4,11 @@
             {{ __('Daftar Koleksi') }}
         </h2>
     </x-slot>
- 
+ <!-- 
+Nama    : Davin Wahyu Wardana
+NIM     : 6706223003
+Kelas   : D3IF-4603 
+-->
 @section('content')
     <div class="container">
         <div class="card">

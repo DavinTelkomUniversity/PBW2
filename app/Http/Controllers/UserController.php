@@ -8,6 +8,10 @@ use App\DataTables\UserDataTable;
 
 class UserController extends Controller
 {
+    // Nama    : Davin Wahyu Wardana
+    // NIM     : 6706223003
+    // Kelas   : D3IF-4603
+    
     // public function index() {
     //     $users = User::all();
     //     return view('user.daftarPengguna', compact('users'));

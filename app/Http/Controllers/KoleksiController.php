@@ -9,6 +9,11 @@ use App\DataTables\KoleksiDataTable;
 
 class KoleksiController extends Controller
 {
+
+    // Nama    : Davin Wahyu Wardana
+    // NIM     : 6706223003
+    // Kelas   : D3IF-4603
+
     // public function index() {
     //     $koleksi = Koleksi::all();
     //     return view('koleksi.daftarKoleksi', compact('koleksi'));
