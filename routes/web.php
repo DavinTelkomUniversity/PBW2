@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\KoleksiController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,5 +41,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/koleksiTambah', [KoleksiController::class, 'create'])->name('koleksi.registrasi');
     Route::get('/koleksiView/{id}', [KoleksiController::class, 'show'])->name('koleksi.infoKoleksi');
 });
+ 
+// Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 
 require __DIR__.'/auth.php';
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
