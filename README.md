@@ -32,6 +32,8 @@ Portofolio  : [davinwardana.com](https://davinwardana.com)
 - cp .env.example .env [prompt] [optional]
 - copy .env.example .env [prompt] [optional]
 - composer install [prompt] [optional]
+- php artisan make:migration create_koleksi_table [prompt]
+- [database/migrations/2023_10_05_085814_create_koleksi_table.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/database/migrations/2023_10_05_085814_create_koleksi_table.php) [replace]
 - php artisan migrate [prompt] [optional]
 - php artisan key:generate [prompt] [optional]
 - npm install --save-dev vite [prompt]
