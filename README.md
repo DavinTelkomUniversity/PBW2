@@ -39,10 +39,12 @@ Portofolio  : [davinwardana.com](https://davinwardana.com)
 - php artisan make:model Koleksi
 - php artisan make:controller UserController
 - php artisan make:controller KoleksiController
-- [app/View/Components/AppLayout.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/app/View/Components/AppLayout.php) [replace]
 - [routes/web.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/routes/web.php) [replace]
+- [App/Models/User.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/app/Models/User.php) [replace]
+- [App/Models/Koleksi.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/app/Models/Koleksi.php) [replace]
 - [App/Http/Controllers/UserController.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/app/Http/Controllers/UserController.php) [replace]
 - [App/Http/Controllers/KoleksiController.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/app/Http/Controllers/KoleksiController.php) [replace]
+- [App/View/Components/AppLayout.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/app/View/Components/AppLayout.php) [replace]
 - [resources/views/Layouts/app.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/resources/views/layouts/app.blade.php) [replace]
 - [resources/views/layouts/navigation.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/resources/views/layouts/navigation.blade.php) [replace]
 - [resources/views/koleksi/daftarKoleksi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/resources/views/koleksi/daftarKoleksi.blade.php) [replace]
