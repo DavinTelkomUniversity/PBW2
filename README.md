@@ -26,6 +26,20 @@ Portofolio  : [davinwardana.com](https://davinwardana.com)
 <img src="https://i.ibb.co/h2NwWYV/11.png" width="200" alt="Laravel Logo"> 
 <img src="https://i.ibb.co/5W6jbV8/12.png" width="200" alt="Laravel Logo"></p>
 
+## Installation Update
+
+- Git clone branch Modul01
+- php artisan make:migration modified_users_1 --table=users
+- [database/migrations/2023_10_11_060354_modified_users_1.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul02/database/migrations/2023_10_11_060354_modified_users_1.php) [replace]
+- composer require doctrine/dbal [prompt]
+- composer update [prompt]
+- php artisan migrate [prompt]
+- [app/Models/User.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul02/app/Models/User.php) [replace]
+- [app/http/Requests/Auth/LoginRequest.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul02/app/Http/Requests/Auth/LoginRequest.php) [replace]
+- [app/Http/Controllers/Auth/RegisteredUserController.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul02/app/Http/Controllers/Auth/RegisteredUserController.php) [replace]
+- [resources/views/auth/login.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul02/resources/views/auth/login.blade.php) [replace]
+- [resources/views/auth/register.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul02/resources/views/auth/register.blade.php) [replace]
+
 ##
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
