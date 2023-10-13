@@ -29,7 +29,7 @@ Portofolio  : [davinwardana.com](https://davinwardana.com)
 ## Installation Update
 
 - Git clone branch Modul01
-- php artisan make:migration modified_users_1 --table=users
+- php artisan make:migration modified_users_1 --table=users [prompt]
 - [database/migrations/2023_10_11_060354_modified_users_1.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul02/database/migrations/2023_10_11_060354_modified_users_1.php) [replace]
 - composer require doctrine/dbal [prompt]
 - composer update [prompt]
