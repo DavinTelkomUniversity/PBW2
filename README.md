@@ -26,6 +26,32 @@ Portofolio  : [davinwardana.com](https://davinwardana.com)
 <img src="https://i.ibb.co/h2NwWYV/11.png" width="200" alt="Laravel Logo"> 
 <img src="https://i.ibb.co/5W6jbV8/12.png" width="200" alt="Laravel Logo"></p>
 
+## Installation Update
+
+- Git clone branch Modul02
+- cp .env.example .env [prompt] [optional]
+- copy .env.example .env [prompt] [optional]
+- composer install [prompt] [optional]
+- php artisan migrate [prompt] [optional]
+- php artisan key:generate [prompt] [optional]
+- npm install --save-dev vite [prompt]
+- npm run dev [prompt]
+- php artisan make:model Koleksi
+- php artisan make:controller UserController
+- php artisan make:controller KoleksiController
+- [app/View/Components/AppLayout.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/app/View/Components/AppLayout.php) [replace]
+- [routes/web.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/routes/web.php) [replace]
+- [App/Http/Controllers/UserController.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/app/Http/Controllers/UserController.php) [replace]
+- [App/Http/Controllers/KoleksiController.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/app/Http/Controllers/KoleksiController.php) [replace]
+- [resources/views/Layouts/app.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/resources/views/layouts/app.blade.php) [replace]
+- [resources/views/layouts/navigation.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/resources/views/layouts/navigation.blade.php) [replace]
+- [resources/views/koleksi/daftarKoleksi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/resources/views/koleksi/daftarKoleksi.blade.php) [replace]
+- [resources/views/koleksi/infoKoleksi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/resources/views/koleksi/infoKoleksi.blade.php) [replace]
+- [resources/views/koleksi/registrasi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/resources/views/koleksi/registrasi.blade.php) [replace]
+- [resources/views/user/daftarPengguna.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/resources/views/user/daftarPengguna.blade.php) [replace]
+- [resources/views/user/infoPengguna.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/resources/views/user/infoPengguna.blade.php) [replace]
+- [resources/views/user/registrasi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul03/resources/views/user/registrasi.blade.php) [replace]
+
 ##
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
