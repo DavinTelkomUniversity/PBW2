@@ -69,6 +69,8 @@ class KoleksiController extends Controller
         'namaKoleksi' => $request->namaKoleksi,
         'jenisKoleksi' => $request->jenisKoleksi,
         'jumlahKoleksi' => $request->jumlahKoleksi,
+        'jumlahSisa' => 0,
+        'jumlahKeluar' => 0,
     ]);
     // return redirect()->route('koleksi.store')->with('success', 'Koleksi berhasil ditambahkan!');
     Session::flash('success', 'Koleksi berhasil ditambahkan!');

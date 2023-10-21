@@ -7,7 +7,9 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Nama     : Davin Wahyu Wardana
+     * NIM      : 6706223003
+     * Kelas    : D3IF-4603
      */
     public function up(): void
     {
