@@ -18,6 +18,8 @@
                     <p>Nama Koleksi: {{ $koleksi->namaKoleksi }}</p>
                     <p>Jenis Koleksi: {{ ($koleksi->jenisKoleksi == 1) ? 'Buku' : (($koleksi->jenisKoleksi == 2) ? 'Majalah' : 'Cakram Digital') }}</p>
                     <p>Jumlah Koleksi: {{ $koleksi->jumlahKoleksi }}</p>
+                    <p>Jumlah Keluar: {{ $koleksi->jumlahKeluar }}</p>
+                    <p>Jumlah Sisa: {{ $koleksi->jumlahSisa }}</p>
                     <p>Ditambahkan: {{ $koleksi->created_at }}</p>
                 </div>
             </div>

@@ -40,8 +40,19 @@ class KoleksiDataTable extends DataTable
                     return 'Tidak Diketahui';
             }
         })
-            ->addColumn('action', 'koleksi.action')
-            ->setRowId('id');
+        ->setRowId('id')
+        ->editColumn('view', function($data) {
+            return view('koleksi.viewKoleksi', ['id' => $data->id]);
+        })
+        ->editColumn('action', function($data) {
+            return view('koleksi.actionKoleksi', ['id' => $data->id]);
+        })
+        ->editColumn('created_at', function ($data) {
+            return $data->created_at->format('Y-m-d H:i:s');
+        })
+        ->editColumn('updated_at', function ($data) {
+            return $data->updated_at->format('Y-m-d H:i:s');
+        });
     }
 
     /**
@@ -65,6 +76,10 @@ class KoleksiDataTable extends DataTable
                     ->orderBy(1)
                     ->selectStyleSingle()
                     ->buttons([
+                        Button::make('add')
+                        ->action('window.location.href = "'.route('koleksi.registrasi').'"')
+                        ->className('btn-dark')
+                        ->text('Tambah'),
                         Button::make('excel'),
                         Button::make('csv'),
                         Button::make('pdf'),
@@ -77,6 +92,19 @@ class KoleksiDataTable extends DataTable
     /**
      * Get the dataTable columns definition.
      */
+    // public function getColumns(): array
+    // {
+    //     return [
+    //         Column::make('id'),
+    //         Column::make('namaKoleksi'),
+    //         Column::make('jenisKoleksi'),
+    //         Column::make('jumlahKoleksi'),
+    //         Column::make('jumlahKeluar'),
+    //         Column::make('jumlahSisa'),
+    //         Column::make('created_at'),
+    //         Column::make('updated_at'),
+    //     ];
+    // }
     public function getColumns(): array
     {
         return [
@@ -84,11 +112,26 @@ class KoleksiDataTable extends DataTable
             Column::make('namaKoleksi'),
             Column::make('jenisKoleksi'),
             Column::make('jumlahKoleksi'),
+            Column::make('jumlahKeluar'),
+            Column::make('jumlahSisa'),
             Column::make('created_at'),
             Column::make('updated_at'),
+            Column::computed('view')
+            ->exportable(false)
+            ->printable(false)
+            ->width(60)
+            ->addClass('text-center')
+            ->searchable(false)
+            ->orderable(false),
+            Column::computed('action')
+            ->exportable(false)
+            ->printable(false)
+            ->width(60)
+            ->addClass('text-center')
+            ->searchable(false)
+            ->orderable(false),
         ];
     }
-
     /**
      * Get the filename for export.
      */

@@ -1,3 +1,14 @@
+<!--
+         _____          __        __  _____   ___    __
+        |  __ \     /\  \ \      / / |_   _| |   \   | |
+        | |  | |   /  \  \ \    / /    | |   | |\ \  | |
+        | |  | |  / /\ \  \ \  / /     | |   | | \ \ | |
+        | |__| | / /__\ \  \ \/ /     _| |_  | |  \ \| |
+        |_____/ /_/    \_\  \__/     |_____| |_|   \___|
+        
+    DEVELOPED BY DAVIN WARDANA (DAVIN.ID / DAVINWARDANA.COM)
+    
+-->
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,12 +28,12 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('koleksi.daftarKoleksi')" :active="request()->routeIs('koleksi.daftarKoleksi') || request()->routeIs('koleksi.registrasi') || request()->routeIs('koleksi.infoKoleksi')">
+                    <x-nav-link :href="route('koleksi.daftarKoleksi')" :active="request()->routeIs('koleksi.daftarKoleksi') || request()->routeIs('koleksi.registrasi') || request()->routeIs('koleksi.infoKoleksi') || request()->routeIs('koleksi.editKoleksi')">
                         {{ __('Koleksi') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('user.daftarPengguna')" :active="request()->routeIs('user.daftarPengguna') || request()->routeIs('user.registrasi') || request()->routeIs('user.infoPengguna')">
+                    <x-nav-link :href="route('user.daftarPengguna')" :active="request()->routeIs('user.daftarPengguna') || request()->routeIs('user.registrasi') || request()->routeIs('user.infoPengguna') || request()->routeIs('user.editPengguna')">
                         {{ __('Pengguna') }}
                     </x-nav-link>
                 </div>
@@ -81,7 +92,11 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
         </div>
-
+<!-- 
+Nama    : Davin Wahyu Wardana
+NIM     : 6706223003
+Kelas   : D3IF-4603 
+-->
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">

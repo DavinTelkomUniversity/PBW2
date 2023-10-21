@@ -18,7 +18,7 @@ class KoleksiController extends Controller
     //     $koleksi = Koleksi::all();
     //     return view('koleksi.daftarKoleksi', compact('koleksi'));
     // }
-
+        
     public function index(KoleksiDataTable $dataTable)
     {
         return $dataTable->render('koleksi.daftarKoleksi');
@@ -35,6 +35,29 @@ class KoleksiController extends Controller
     return view('koleksi.registrasi');
     }
 
+    public function edit($id)
+    {
+        $koleksi = Koleksi::findOrFail($id);
+        return view('koleksi.editKoleksi', compact('koleksi'));
+    }
+    
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'jenisKoleksi' => 'required|string|max:255',
+            'jumlahKeluar' => 'required|integer|max:' . Koleksi::find($id)->jumlahKoleksi,
+        ]);
+
+        $koleksi = Koleksi::findOrFail($id);
+        $koleksi->update([
+            'jenisKoleksi' => $request->jenisKoleksi,
+            'jumlahKeluar' => $request->jumlahKeluar,
+            'jumlahSisa' => $koleksi->jumlahKoleksi - $request->jumlahKeluar,
+        ]);
+
+        return redirect()->route('koleksi.daftarKoleksi')->with('success', 'Koleksi berhasil diperbarui!');
+    }
+    
     public function store(Request $request)
     {
     $request->validate([

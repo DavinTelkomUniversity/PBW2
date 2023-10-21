@@ -12,32 +12,55 @@ class UserController extends Controller
     // NIM     : 6706223003
     // Kelas   : D3IF-4603
     
-    // public function index() {
-    //     $users = User::all();
-    //     return view('user.daftarPengguna', compact('users'));
-    // }
     public function index(UserDataTable $dataTable)
     {
         return $dataTable->render('user.daftarPengguna');
     }
 
-    public function showUser($username) {
+    public function showUser($username)
+    {
         $user = User::where('username', $username)->firstOrFail();
         return view('user.infoPengguna', compact('user'));
     }
 
     public function create()
     {
-    return view('user.registrasi');
+        return view('user.registrasi');
+    }
+
+    public function edit($username)
+    {
+        $user = User::where('username', $username)->firstOrFail();
+        return view('user.editPengguna', compact('user'));
     }
 
     public function store(Request $request)
     {
-        
     }
 
-    public function show()
+    public function update(Request $request, $username)
     {
-        
+        $request->validate([
+            'fullname' => 'required|string|max:255',
+            'password' => 'nullable|string|min:6',
+            'address' => 'required|string|max:255',
+            'phoneNumber' => 'required|string|max:15',
+        ]);
+
+        $user = User::where('username', $username)->firstOrFail();
+        $data = [
+            'fullname' => $request->fullname,
+            'password' => $request->password,
+            'address' => $request->address,
+            'phoneNumber' => $request->phoneNumber,
+        ];
+
+        if ($request->filled('password')) {
+            $data['password'] = bcrypt($request->password);
+        }
+
+        $user->update($data);
+
+        return redirect()->route('user.daftarPengguna')->with('success', 'Profil pengguna berhasil diperbarui!');
     }
 }

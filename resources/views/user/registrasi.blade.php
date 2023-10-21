@@ -115,7 +115,7 @@ Kelas   : D3IF-4603
 
                         <!-- Tombol Submit -->
                         <div class="flex items-center justify-end mt-4">
-                            <a href="#" class="btn btn-dark" onclick="goBack()">Back</a>
+                            <a href="{{ route('user.daftarPengguna') }}" class="btn btn-dark">Back</a>
                             <x-primary-button class="ml-4" type="submit">Tambah User</x-primary-button>
                         </div>
                     </form>
@@ -123,10 +123,5 @@ Kelas   : D3IF-4603
             </div>
         </div>
     </div>
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
 @endsection
 </x-app-layout>

@@ -3,6 +3,7 @@
 namespace App\DataTables;
  
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -30,7 +31,19 @@ class UserDataTable extends DataTable
                     return 'Tidak Diketahui';
             }
         })
-        ->setRowId('id');
+        ->setRowId('id')
+        ->editColumn('view', function($data) {
+            return view('user.viewPengguna', ['username' => $data->username]);
+        })
+        ->editColumn('action', function($data) {
+            return view('user.actionPengguna', ['username' => $data->username]);
+        })
+        ->editColumn('created_at', function ($data) {
+            return $data->created_at->format('Y-m-d H:i:s');
+        })
+        ->editColumn('updated_at', function ($data) {
+            return $data->updated_at->format('Y-m-d H:i:s');
+        });
     }
  
     public function query(User $model): QueryBuilder
@@ -47,7 +60,10 @@ class UserDataTable extends DataTable
                     ->orderBy(1)
                     ->selectStyleSingle()
                     ->buttons([
-                        Button::make('add'),
+                        Button::make('add')
+                        ->action('window.location.href = "'.route('user.registrasi').'"')
+                        ->className('btn-dark')
+                        ->text('Tambah'),
                         Button::make('excel'),
                         Button::make('csv'),
                         Button::make('pdf'),
@@ -68,6 +84,20 @@ class UserDataTable extends DataTable
             Column::make('email'),
             Column::make('created_at'),
             Column::make('updated_at'),
+            Column::computed('view')
+            ->exportable(false)
+            ->printable(false)
+            ->width(60)
+            ->addClass('text-center')
+            ->searchable(false)
+            ->orderable(false),
+            Column::computed('action')
+            ->exportable(false)
+            ->printable(false)
+            ->width(60)
+            ->addClass('text-center')
+            ->searchable(false)
+            ->orderable(false),
         ];
     }
  

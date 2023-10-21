@@ -11,8 +11,13 @@ Kelas   : D3IF-4603
 -->
 @section('content')
     <div class="container">
+    @if(Session::has('success'))
+        <div class="alert alert-success">
+            {{ Session::get('success') }}
+        </div>
+    @endif
         <div class="card">
-            <div class="card-header"><a href="{{ route('koleksi.registrasi') }}" class="btn btn-icon btn-dark">Tambah</a></div>
+            <!-- <div class="card-header"><a href="{{ route('koleksi.registrasi') }}" class="btn btn-icon btn-dark">Tambah</a></div> -->
             <div class="card-body">
                 {{ $dataTable->table() }}
             </div>
