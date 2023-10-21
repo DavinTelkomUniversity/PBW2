@@ -19,40 +19,41 @@ Portofolio  : [davinwardana.com](https://davinwardana.com)
 <img src="https://i.ibb.co/gzzD8J8/4.png" width="200" alt="Laravel Logo"> 
 <img src="https://i.ibb.co/TKWbwYh/5.png" width="200" alt="Laravel Logo"> 
 <img src="https://i.ibb.co/9n6Wwwv/6.png" width="200" alt="Laravel Logo"> 
-<img src="https://i.ibb.co/nfn3yqF/7.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/y82n790/7.png" width="200" alt="Laravel Logo"> 
 <img src="https://i.ibb.co/L05r0tx/8.png" width="200" alt="Laravel Logo"> 
 <img src="https://i.ibb.co/gzG1T4T/9.png" width="200" alt="Laravel Logo"> 
 <img src="https://i.ibb.co/r5Hzq8Y/10.png" width="200" alt="Laravel Logo"> 
-<img src="https://i.ibb.co/pK88q78/11.png" width="200" alt="Laravel Logo"> 
-<img src="https://i.ibb.co/5W6jbV8/12.png" width="200" alt="Laravel Logo"></p>
-
+<img src="https://i.ibb.co/VqQ8JN6/11.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/5W6jbV8/12.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/M2VZWpt/13.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/6gvHH7t/14.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/wLN7L5S/15.png" width="200" alt="Laravel Logo"> 
+<img src="https://i.ibb.co/NVmXg9S/16.png" width="200" alt="Laravel Logo"></p>
 ## Installation Update
 
-- Git clone branch Modul03
+- Git clone branch Modul04
 - cp .env.example .env [prompt] [optional]
 - copy .env.example .env [prompt] [optional]
 - composer install [prompt] [optional]
-- php artisan migrate [prompt] [optional]
-- php artisan key:generate [prompt] [optional]
+- php artisan make:migration modified_migration_koleksi_3 --table=koleksi
+- [database/migrations/2023_10_21_041540_modified_migration_koleksi_3.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/database/migrations/2023_10_21_041540_modified_migration_koleksi_3.php) [replace]
+- php artisan migrate [prompt]
+- php artisan key:generate [prompt]
 - npm install --save-dev vite [prompt]
-- composer require laravel/ui --dev [prompt]
-- php artisan ui bootstrap --auth [prompt] [replace:no]
-- composer require yajra/laravel-datatables [prompt]
-- npm i laravel-datatables-vite --save-dev [prompt]
 - npm run dev [prompt]
-- [resources/js/app.js](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/resources/js/app.js) [replace]
-- [resources/sass/app.scss](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/resources/sass/app.scss) [replace]
-- [App/DataTables/UserDataTable.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/app/DataTables/UserDataTable.php) [create]
-- [App/DataTables/KoleksiDataTable.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/app/DataTables/KoleksiDataTable.php) [create]
-- [App/Http/Controllers/UserController.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/app/Http/Controllers/UserController.php) [replace]
-- [App/Http/Controllers/KoleksiController.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/app/Http/Controllers/KoleksiController.php) [replace]
-- [resources/views/Layouts/app.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/resources/views/layouts/app.blade.php) [replace]
-- [resources/views/koleksi/daftarKoleksi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/resources/views/koleksi/daftarKoleksi.blade.php) [replace]
-- [resources/views/koleksi/infoKoleksi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/resources/views/koleksi/infoKoleksi.blade.php) [replace]
-- [resources/views/koleksi/registrasi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/resources/views/koleksi/registrasi.blade.php) [replace]
-- [resources/views/user/daftarPengguna.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/resources/views/user/daftarPengguna.blade.php) [replace]
-- [resources/views/user/infoPengguna.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/resources/views/user/infoPengguna.blade.php) [replace]
-- [resources/views/user/registrasi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul04/resources/views/user/registrasi.blade.php) [replace]
+- [App/Models/Koleksi.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/app/Models/Koleksi.php) [replace]
+- [App/Models/User.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/app/Models/User.php) [replace]
+- [App/DataTables/UserDataTable.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/app/DataTables/UserDataTable.php) [replace]
+- [App/DataTables/KoleksiDataTable.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/app/DataTables/KoleksiDataTable.php) [replace]
+- [App/Http/Controllers/UserController.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/app/Http/Controllers/UserController.php) [replace]
+- [App/Http/Controllers/KoleksiController.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/app/Http/Controllers/KoleksiController.php) [replace]
+- [resources/views/koleksi/actionKoleksi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/koleksi/actionKoleksi.blade.php) [create]
+- [resources/views/koleksi/editKoleksi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/koleksi/editKoleksi.blade.php) [create]
+- [resources/views/koleksi/viewKoleksi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/koleksi/viewKoleksi.blade.php) [create]
+- [resources/views/user/actionPengguna.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/user/actionPengguna.blade.php) [replace]
+- [resources/views/user/editPengguna.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/user/editPengguna.blade.php) [create]
+- [resources/views/user/viewPengguna.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/user/viewPengguna.blade.php) [create]
+- [routes/web.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/routes/web.php) [replace]
 
 ##
 
