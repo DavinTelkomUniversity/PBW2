@@ -52,7 +52,7 @@ Portofolio  : [davinwardana.com](https://davinwardana.com)
 - [resources/views/koleksi/actionKoleksi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/koleksi/actionKoleksi.blade.php) [create]
 - [resources/views/koleksi/editKoleksi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/koleksi/editKoleksi.blade.php) [create]
 - [resources/views/koleksi/viewKoleksi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/koleksi/viewKoleksi.blade.php) [create]
-- [resources/views/user/actionPengguna.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/user/actionPengguna.blade.php) [replace]
+- [resources/views/user/actionPengguna.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/user/actionPengguna.blade.php) [create]
 - [resources/views/user/editPengguna.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/user/editPengguna.blade.php) [create]
 - [resources/views/user/viewPengguna.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/user/viewPengguna.blade.php) [create]
 - [routes/web.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/routes/web.php) [replace]
