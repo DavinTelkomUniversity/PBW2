@@ -9,7 +9,6 @@
 | NIM   : 6706223003
 | Kelas : D3IF-4603 
 -->
-@section('content')
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -30,5 +29,4 @@
             window.history.back();
         }
     </script>
-@endsection
 </x-app-layout>

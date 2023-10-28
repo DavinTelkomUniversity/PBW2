@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Daftar Koleksi') }}
+            {{ __('Daftar Transaksi') }}
         </h2>
     </x-slot>
  <!-- 
@@ -16,7 +16,7 @@ Kelas   : D3IF-4603
         </div>
     @endif
         <div class="card">
-            <!-- <div class="card-header"><a href="{{ route('koleksi.registrasi') }}" class="btn btn-icon btn-dark">Tambah</a></div> -->
+            <!-- <div class="card-header"><a href="{{ route('transaksi.registrasi') }}" class="btn btn-icon btn-dark">Tambah</a></div> -->
             <div class="card-body">
                 {{ $dataTable->table() }}
             </div>
@@ -28,8 +28,8 @@ Kelas   : D3IF-4603
     <script>
         $(document).on('click', '.view-detail', function () {
             var id = $(this).data('id');
-            // Redirect ke rute infoKoleksi dengan parameter ID
-            window.location.href = "{{ route('koleksi.infoKoleksi', '') }}/" + id;
+            // Redirect ke rute infoTransaksi dengan parameter ID
+            window.location.href = "{{ route('transaksi.infoTransaksi', '') }}/" + id;
         });
     </script>
 @endpush

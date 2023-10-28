@@ -32,29 +32,11 @@ Portofolio  : [davinwardana.com](https://davinwardana.com)
 
 ## Installation Update
 
-- Git clone branch Modul04
+- Git clone branch Modul05
 - cp .env.example .env [prompt] [optional]
 - copy .env.example .env [prompt] [optional]
 - composer install [prompt] [optional]
-- php artisan make:migration modified_migration_koleksi_3 --table=koleksi [prompt]
-- [database/migrations/2023_10_21_041540_modified_migration_koleksi_3.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/database/migrations/2023_10_21_041540_modified_migration_koleksi_3.php) [replace]
-- php artisan migrate [prompt]
-- php artisan key:generate [prompt]
-- npm install --save-dev vite [prompt]
-- npm run dev [prompt]
-- [App/Models/Koleksi.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/app/Models/Koleksi.php) [replace]
-- [App/Models/User.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/app/Models/User.php) [replace]
-- [App/DataTables/UserDataTable.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/app/DataTables/UserDataTable.php) [replace]
-- [App/DataTables/KoleksiDataTable.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/app/DataTables/KoleksiDataTable.php) [replace]
-- [App/Http/Controllers/UserController.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/app/Http/Controllers/UserController.php) [replace]
-- [App/Http/Controllers/KoleksiController.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/app/Http/Controllers/KoleksiController.php) [replace]
-- [resources/views/koleksi/actionKoleksi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/koleksi/actionKoleksi.blade.php) [create]
-- [resources/views/koleksi/editKoleksi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/koleksi/editKoleksi.blade.php) [create]
-- [resources/views/koleksi/viewKoleksi.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/koleksi/viewKoleksi.blade.php) [create]
-- [resources/views/user/actionPengguna.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/user/actionPengguna.blade.php) [replace]
-- [resources/views/user/editPengguna.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/user/editPengguna.blade.php) [create]
-- [resources/views/user/viewPengguna.blade.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/resources/views/user/viewPengguna.blade.php) [create]
-- [routes/web.php](https://github.com/DavinTelkomUniversity/PBW2/blob/Modul05/routes/web.php) [replace]
+- on going
 
 ##
 

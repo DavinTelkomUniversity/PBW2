@@ -9,7 +9,6 @@ Nama    : Davin Wahyu Wardana
 NIM     : 6706223003
 Kelas   : D3IF-4603 
 -->
-@section('content')
     <div class="container">
     @if(Session::has('success'))
         <div class="alert alert-success">
@@ -23,7 +22,6 @@ Kelas   : D3IF-4603
             </div>
         </div>
     </div>
-@endsection
  
 @push('scripts')
     {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
