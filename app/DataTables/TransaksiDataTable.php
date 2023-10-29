@@ -32,7 +32,9 @@ class TransaksiDataTable extends DataTable
                 return view('transaksi.actionTransaksi', ['id' => $data->id]);
             });
     }
-
+    // Nama    : Davin Wahyu Wardana
+    // NIM     : 6706223003
+    // Kelas   : D3IF-4603
     public function query(Transaksi $model): QueryBuilder
     {
         return $model->newQuery()
@@ -63,7 +65,9 @@ class TransaksiDataTable extends DataTable
                 Button::make('reload')
             ]);
     }
-
+    // Nama    : Davin Wahyu Wardana
+    // NIM     : 6706223003
+    // Kelas   : D3IF-4603
     public function getColumns(): array
     {
         return [

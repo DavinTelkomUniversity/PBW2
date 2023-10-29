@@ -15,7 +15,6 @@ use Yajra\DataTables\Services\DataTable;
 class KoleksiDataTable extends DataTable
 {
     /**
-     * Build the DataTable class.
      *
      * @param QueryBuilder $query Results from query() method.
      */
@@ -88,23 +87,9 @@ class KoleksiDataTable extends DataTable
                         Button::make('reload')
                     ]);
     }
-
-    /**
-     * Get the dataTable columns definition.
-     */
-    // public function getColumns(): array
-    // {
-    //     return [
-    //         Column::make('id'),
-    //         Column::make('namaKoleksi'),
-    //         Column::make('jenisKoleksi'),
-    //         Column::make('jumlahKoleksi'),
-    //         Column::make('jumlahKeluar'),
-    //         Column::make('jumlahSisa'),
-    //         Column::make('created_at'),
-    //         Column::make('updated_at'),
-    //     ];
-    // }
+    // Nama    : Davin Wahyu Wardana
+    // NIM     : 6706223003
+    // Kelas   : D3IF-4603
     public function getColumns(): array
     {
         return [
@@ -132,9 +117,9 @@ class KoleksiDataTable extends DataTable
             ->orderable(false),
         ];
     }
-    /**
-     * Get the filename for export.
-     */
+    // Nama    : Davin Wahyu Wardana
+    // NIM     : 6706223003
+    // Kelas   : D3IF-4603
     protected function filename(): string
     {
         return 'Koleksi_' . date('YmdHis');

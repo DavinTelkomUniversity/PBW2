@@ -43,7 +43,11 @@
                     </x-nav-link>
                 </div>
             </div>
-
+<!-- 
+Nama    : Davin Wahyu Wardana
+NIM     : 6706223003
+Kelas   : D3IF-4603 
+-->
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">

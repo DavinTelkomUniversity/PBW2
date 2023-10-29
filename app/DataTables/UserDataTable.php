@@ -45,7 +45,9 @@ class UserDataTable extends DataTable
             return $data->updated_at->format('Y-m-d H:i:s');
         });
     }
- 
+    // Nama    : Davin Wahyu Wardana
+    // NIM     : 6706223003
+    // Kelas   : D3IF-4603
     public function query(User $model): QueryBuilder
     {
         return $model->newQuery();
@@ -100,7 +102,9 @@ class UserDataTable extends DataTable
             ->orderable(false),
         ];
     }
- 
+    // Nama    : Davin Wahyu Wardana
+    // NIM     : 6706223003
+    // Kelas   : D3IF-4603
     protected function filename(): string
     {
         return 'Users_'.date('YmdHis');

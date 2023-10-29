@@ -16,7 +16,6 @@ Kelas   : D3IF-4603
         </div>
     @endif
         <div class="card">
-            <!-- <div class="card-header"><a href="{{ route('transaksi.registrasi') }}" class="btn btn-icon btn-dark">Tambah</a></div> -->
             <div class="card-body">
                 {{ $dataTable->table() }}
             </div>

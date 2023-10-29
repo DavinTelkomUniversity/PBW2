@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class TransaksiDetail extends Model
 {
     use HasFactory;
+    // Nama    : Davin Wahyu Wardana
+    // NIM     : 6706223003
+    // Kelas   : D3IF-4603
     protected $table = 'transaksi_detail';
     
     protected $fillable = [

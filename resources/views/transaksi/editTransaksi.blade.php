@@ -9,16 +9,10 @@ Nama    : Davin Wahyu Wardana
 NIM     : 6706223003
 Kelas   : D3IF-4603 
 -->
-
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
-                        <!-- @if(Session::has('success'))
-                            <div class="alert alert-success">
-                                {{ Session::get('success') }}
-                            </div>
-                        @endif -->
                         <form action="{{ route('transaksi.update', ['id' => $transaksiDetail->id]) }}" method="POST">
                             @csrf
                             @method('PUT')

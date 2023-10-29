@@ -11,6 +11,10 @@ use App\Models\Koleksi;
 use App\DataTables\TransaksiDataTable;
 use Carbon\Carbon;
 
+// Nama    : Davin Wahyu Wardana
+// NIM     : 6706223003
+// Kelas   : D3IF-4603
+
 class TransaksiController extends Controller
 {
     public function index(TransaksiDataTable $dataTable)
@@ -33,11 +37,6 @@ class TransaksiController extends Controller
         return view('transaksi.registrasi', compact('users','koleksi'));
     }
 
-    // public function edit($id)
-    // {
-    //     $transaksi = Transaksi::findOrFail($id);
-    //     return view('transaksi.editTransaksi', compact('transaksi'));
-    // }
     public function edit($id)
     {
         $transaksiDetail = TransaksiDetail::findOrFail($id);
@@ -46,7 +45,9 @@ class TransaksiController extends Controller
         return view('transaksi.editTransaksi', compact('transaksiDetail', 'transaksi','koleksi'));
     }
     
-
+// Nama    : Davin Wahyu Wardana
+// NIM     : 6706223003
+// Kelas   : D3IF-4603
     public function update(Request $request, $id)
 {
     $request->validate([
@@ -63,7 +64,6 @@ class TransaksiController extends Controller
     $transaksi = Transaksi::findOrFail($transaksiDetail->idTransaksi);
 
     if ($request->status != 1) {
-        // $koleksi = Koleksi::where('id', $transaksiDetail->idKoleksi)->first();
         $koleksi = Koleksi::findOrFail($transaksiDetail->idKoleksi);
         if ($koleksi) {
             $koleksi->jumlahSisa += ($request->status == 1) ? -1 : 1;
@@ -72,7 +72,6 @@ class TransaksiController extends Controller
         }
     }
 
-    // Jika semua transaksi_detail dengan idTransaksi ini tidak memiliki status 1, update tanggalSelesai
     if (TransaksiDetail::where('idTransaksi', $transaksi->id)->where('status', 1)->count() == 0) {
         $transaksi->tanggalSelesai = Carbon::now();
         $transaksi->save();
@@ -80,11 +79,9 @@ class TransaksiController extends Controller
 
     return redirect()->route('transaksi.infoTransaksi', $transaksi->id)->with('success', 'Transaksi berhasil diperbarui!');
 }
-    // public function update(Request $request, $id)
-    // {
-    //     return redirect()->route('transaksi.editTransaksi', $id)->with('success', 'Transaksi berhasil diperbarui!');
-    // }
-    
+// Nama    : Davin Wahyu Wardana
+// NIM     : 6706223003
+// Kelas   : D3IF-4603
     public function store(Request $request)
 {
     $request->validate([
@@ -115,7 +112,6 @@ class TransaksiController extends Controller
         $koleksi->save();
     }
 
-    // return redirect()->route('transaksi.daftarTransaksi')->with('success', 'Transaksi berhasil ditambahkan!');
     Session::flash('success', 'Transaksi berhasil ditambahkan!');
     return redirect()->route('transaksi.registrasi');
 }
