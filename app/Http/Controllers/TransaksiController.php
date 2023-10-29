@@ -21,7 +21,9 @@ class TransaksiController extends Controller
     public function show($id)
     {
         $transaksi = Transaksi::findOrFail($id);
-        return view('transaksi.infoTransaksi', compact('transaksi'));
+        $koleksi = Koleksi::where('id', $transaksi->id)->get();
+        $transaksiDetails = TransaksiDetail::where('idTransaksi', $id)->get();
+        return view('transaksi.infoTransaksi', compact('transaksi','transaksiDetails'));
     }
 
     public function create()
@@ -31,28 +33,57 @@ class TransaksiController extends Controller
         return view('transaksi.registrasi', compact('users','koleksi'));
     }
 
+    // public function edit($id)
+    // {
+    //     $transaksi = Transaksi::findOrFail($id);
+    //     return view('transaksi.editTransaksi', compact('transaksi'));
+    // }
     public function edit($id)
     {
-        $transaksi = Transaksi::findOrFail($id);
-        return view('transaksi.editTransaksi', compact('transaksi'));
+        $transaksiDetail = TransaksiDetail::findOrFail($id);
+        $transaksi = Transaksi::findOrFail($transaksiDetail->idTransaksi);
+        $koleksi = Koleksi::where('id', $transaksiDetail->idKoleksi);
+        return view('transaksi.editTransaksi', compact('transaksiDetail', 'transaksi','koleksi'));
     }
     
+
     public function update(Request $request, $id)
-    {
-        $request->validate([
-            'jenisTransaksi' => 'required|string|max:255',
-            'jumlahKeluar' => 'required|integer|max:' . Transaksi::find($id)->jumlahTransaksi,
-        ]);
+{
+    $request->validate([
+        'status' => 'required|integer|in:1,2,3',
+    ]);
 
-        $transaksi = Transaksi::findOrFail($id);
-        $transaksi->update([
-            'jenisTransaksi' => $request->jenisTransaksi,
-            'jumlahKeluar' => $request->jumlahKeluar,
-            'jumlahSisa' => $transaksi->jumlahTransaksi - $request->jumlahKeluar,
-        ]);
-
-        return redirect()->route('transaksi.daftarTransaksi')->with('success', 'Transaksi berhasil diperbarui!');
+    $transaksiDetail = TransaksiDetail::findOrFail($id);
+    $transaksiDetail->status = $request->status;
+    $transaksiDetail->save();
+    if ($request->status != 1) {
+        $transaksiDetail->tanggalKembali = Carbon::now();
+        $transaksiDetail->save();
     }
+    $transaksi = Transaksi::findOrFail($transaksiDetail->idTransaksi);
+
+    if ($request->status != 1) {
+        // $koleksi = Koleksi::where('id', $transaksiDetail->idKoleksi)->first();
+        $koleksi = Koleksi::findOrFail($transaksiDetail->idKoleksi);
+        if ($koleksi) {
+            $koleksi->jumlahSisa += ($request->status == 1) ? -1 : 1;
+            $koleksi->jumlahKeluar += ($request->status == 1) ? 1 : -1;
+            $koleksi->save();
+        }
+    }
+
+    // Jika semua transaksi_detail dengan idTransaksi ini tidak memiliki status 1, update tanggalSelesai
+    if (TransaksiDetail::where('idTransaksi', $transaksi->id)->where('status', 1)->count() == 0) {
+        $transaksi->tanggalSelesai = Carbon::now();
+        $transaksi->save();
+    }
+
+    return redirect()->route('transaksi.infoTransaksi', $transaksi->id)->with('success', 'Transaksi berhasil diperbarui!');
+}
+    // public function update(Request $request, $id)
+    // {
+    //     return redirect()->route('transaksi.editTransaksi', $id)->with('success', 'Transaksi berhasil diperbarui!');
+    // }
     
     public function store(Request $request)
 {
@@ -69,17 +100,16 @@ class TransaksiController extends Controller
         'tanggalPinjam' => Carbon::now(),
     ]);
 
-    $koleksiIds = [$request->transaksi1, $request->transaksi2, $request->transaksi3];
+    $idKoleksis = [$request->transaksi1, $request->transaksi2, $request->transaksi3];
     
-    foreach ($koleksiIds as $koleksiId) {
-        // Buat detail transaksi
+    foreach ($idKoleksis as $idKoleksi) {
         TransaksiDetail::create([
-            'transaksiId' => $transaksi->id,
-            'koleksiId' => $koleksiId,
+            'idTransaksi' => $transaksi->id,
+            'idKoleksi' => $idKoleksi,
             'status' => 1,
         ]);
 
-        $koleksi = Koleksi::find($koleksiId);
+        $koleksi = Koleksi::find($idKoleksi);
         $koleksi->jumlahKeluar += 1;
         $koleksi->jumlahSisa -= 1;
         $koleksi->save();

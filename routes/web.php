@@ -4,7 +4,6 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\KoleksiController;
 use App\Http\Controllers\TransaksiController;
-use App\Http\Controllers\TransaksiDetailController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,6 +42,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi.daftarTransaksi');
     Route::get('/transaksiTambah', [TransaksiController::class, 'create'])->name('transaksi.registrasi');
     Route::get('/transaksiView/{id}', [TransaksiController::class, 'show'])->name('transaksi.infoTransaksi');
+    Route::put('/transaksiUpdate/{id}', [TransaksiController::class, 'update'])->name('transaksi.update');
+    Route::get('/transaksiUpdate/{id}', [TransaksiController::class, 'edit'])->name('transaksi.editTransaksi');
 });
  
 // Route::get('/users', [UsersController::class, 'index'])->name('users.index');

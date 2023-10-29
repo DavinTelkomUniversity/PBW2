@@ -17,10 +17,10 @@ class TransaksiDataTable extends DataTable
         return (new EloquentDataTable($query))
             ->setRowId('id')
             ->editColumn('Petugas', function($data) {
-                return $data->petugas->fullname; // Mengambil nama lengkap dari relasi petugas (users table)
+                return $data->petugas->fullname;
             })
             ->editColumn('Pinjam', function($data) {
-                return $data->peminjam->fullname; // Mengambil nama lengkap dari relasi peminjam (users table)
+                return $data->peminjam->fullname;
             })
             ->editColumn('tanggalPinjam', function ($data) {
                 return $data->tanggalPinjam;

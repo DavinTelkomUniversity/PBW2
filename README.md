@@ -28,7 +28,12 @@ Portofolio  : [davinwardana.com](https://davinwardana.com)
 <img src="https://i.ibb.co/M2VZWpt/13.png" width="200" alt="Laravel Logo"> 
 <img src="https://i.ibb.co/6gvHH7t/14.png" width="200" alt="Laravel Logo"> 
 <img src="https://i.ibb.co/wLN7L5S/15.png" width="200" alt="Laravel Logo"> 
-<img src="https://i.ibb.co/NVmXg9S/16.png" width="200" alt="Laravel Logo"></p>
+<img src="https://i.ibb.co/NVmXg9S/16.png" width="200" alt="Laravel Logo">
+<img src="https://i.ibb.co/hMGwFx1/17.png" width="200" alt="Laravel Logo">
+<img src="https://i.ibb.co/vDrrwxY/18.png" width="200" alt="Laravel Logo">
+<img src="https://i.ibb.co/9ZvJJ8j/19.png" width="200" alt="Laravel Logo">
+<img src="https://i.ibb.co/Jpk5CYZ/20.png" width="200" alt="Laravel Logo">
+</p>
 
 ## Installation Update
 

@@ -13,18 +13,20 @@ return new class extends Migration
     {
         Schema::create('transaksi_detail', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('transaksiId');
-            $table->foreign('transaksiId')
+            $table->unsignedBigInteger('idTransaksi');
+            $table->foreign('idTransaksi')
                 ->references('id')
                 ->on('transaksi')
                 ->onDelete('cascade')
-                ->onUpdate('cascade');
-            $table->unsignedBigInteger('koleksiId');
-            $table->foreign('koleksiId')
+                ->onUpdate('cascade')
+                ->name('transaksi_detail_transaksiId_foreign');;
+            $table->unsignedBigInteger('idKoleksi');
+            $table->foreign('idKoleksi')
                 ->references('id')
                 ->on('koleksi')
                 ->onDelete('cascade')
-                ->onUpdate('cascade');
+                ->onUpdate('cascade')
+                ->name('transaksi_detail_koleksiId_foreign');;
             $table->date('tanggalKembali')->nullable();
             $table->tinyInteger('status');
             $table->string('keterangan', 1000)->nullable();

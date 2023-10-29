@@ -11,10 +11,19 @@ class TransaksiDetail extends Model
     protected $table = 'transaksi_detail';
     
     protected $fillable = [
-        'transaksiId',
-        'koleksiId',
+        'id',
+        'idTransaksi',
+        'idKoleksi',
         'tanggalKembali',
         'status',
         'keterangan'
     ];
+    public function koleksi()
+    {
+        return $this->belongsTo(Koleksi::class, 'idKoleksi');
+    }
+    public function transaksi()
+    {
+        return $this->belongsTo(Transaksi::class, 'idTransaksi');
+    }
 }
