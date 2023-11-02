@@ -22,11 +22,11 @@ Kelas   : D3IF-4603
                         @csrf
                         @method('PUT')
 
-                        <p>Peminjam: </p>
-                        <p>Vehicle: </p>
-                        <p>Harga: </p>
-                        <p>Start Date: </p>
-                        <p>End Date: </p>
+                        <p>Peminjam: {{ $transaction->user->name }}</p>
+                        <p>Vehicle: {{ $transaction->vehicle->name }}</p>
+                        <p>Harga: {{ $transaction->price }}</p>
+                        <p>Start Date: {{ $transaction->startDate }}</p>
+                        <p>End Date: {{ $transaction->endDate }}</p>
                         <p>Diupdate: {{ $transaction->updated_at }}</p>
 
 
