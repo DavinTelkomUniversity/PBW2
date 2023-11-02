@@ -21,4 +21,13 @@ class Transaction extends Model
         'price',
         'status'
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'userId');
+    }
+
+    public function vehicle()
+    {
+        return $this->belongsTo(Vehicle::class, 'vehicleId');
+    }
 }

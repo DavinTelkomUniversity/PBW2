@@ -28,9 +28,17 @@
                     </x-nav-link>
                 </div>
 
+
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('vehicle.daftarVehicle')" :active="request()->routeIs('vehicle.daftarVehicle') || request()->routeIs('vehicle.registrasi') || request()->routeIs('vehicle.infoVehicle') || request()->routeIs('vehicle.editVehicle')">
                         {{ __('Vehicle') }}
+                    </x-nav-link>
+                </div>
+
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('transaction.daftarTransaction')" :active="request()->routeIs('transaction.daftarTransaction') || request()->routeIs('transaction.registrasi') || request()->routeIs('transaction.infoTransaction') || request()->routeIs('transaction.editVehicle')">
+                        {{ __('Transaction') }}
                     </x-nav-link>
                 </div>
             </div>

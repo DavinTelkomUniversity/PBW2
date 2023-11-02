@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Daftar Vehicle') }}
+            {{ __('Daftar Transaction') }}
         </h2>
     </x-slot>
  <!-- 
@@ -28,7 +28,7 @@ Kelas   : D3IF-4603
     <script>
         $(document).on('click', '.action-detail', function () {
             var id = $(this).data('id');
-            window.location.href = "{{ route('vehicle.editVehicle', '') }}/" + id;
+            window.location.href = "{{ route('transaction.editTransaction', '') }}/" + id;
         });
     </script>
 @endpush

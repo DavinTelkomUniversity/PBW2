@@ -24,8 +24,23 @@ class VehicleDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-        ->editColumn('view', function($data) {
-            return view('vehicle.viewVehicle', ['id' => $data->id]);
+        ->editColumn('typeId', function($data) {
+            return $data->types->name;
+        })
+        ->editColumn('status', function ($data) {
+            switch ($data->status) {
+                case 1:
+                    return 'Pinjam';
+                    break;
+                case 2:
+                    return 'Tersedia';
+                    break;
+                case 3:
+                    return 'Hilang';
+                    break;
+                default:
+                    return 'Tidak Diketahui';
+            }
         })
         ->editColumn('action', function($data) {
             return view('vehicle.actionVehicle', ['id' => $data->id]);
@@ -79,13 +94,6 @@ class VehicleDataTable extends DataTable
             Column::make('status'),
             Column::make('created_at'),
             Column::make('updated_at'),
-            Column::computed('view')
-            ->exportable(false)
-            ->printable(false)
-            ->width(60)
-            ->addClass('text-center')
-            ->searchable(false)
-            ->orderable(false),
             Column::computed('action')
             ->exportable(false)
             ->printable(false)

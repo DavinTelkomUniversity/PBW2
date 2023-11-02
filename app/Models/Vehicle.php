@@ -20,4 +20,18 @@ class Vehicle extends Model
         'dailyPrice',
         'status'
     ];
+
+    public function types()
+    {
+        return $this->belongsTo(Types::class, 'typeId');
+    }
+    public function create()
+    {
+        $types = Types::all();
+        return view('vehicle.registrasi', compact('types'));
+    }
+    public function scopeAvailableVehicles($query)
+    {
+        return $query->where('status', 2);
+    }
 }

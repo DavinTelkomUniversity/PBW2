@@ -25,14 +25,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/vehicleStore', [VehicleController::class, 'store'])->name('vehicle.store');
     Route::get('/vehicle', [VehicleController::class, 'index'])->name('vehicle.daftarVehicle');
     Route::get('/vehicleTambah', [VehicleController::class, 'create'])->name('vehicle.registrasi');
-    Route::get('/vehicleView/{id}', [VehicleController::class, 'show'])->name('vehicle.infoVehicle');
     Route::put('/vehicleUpdate/{id}', [VehicleController::class, 'update'])->name('vehicle.update');
     Route::get('/vehicleUpdate/{id}', [VehicleController::class, 'edit'])->name('vehicle.editVehicle');
 
     Route::post('/transactionStore', [TransactionController::class, 'store'])->name('transaction.store');
     Route::get('/transaction', [TransactionController::class, 'index'])->name('transaction.daftarTransaction');
     Route::get('/transactionTambah', [TransactionController::class, 'create'])->name('transaction.registrasi');
-    Route::get('/transactionView/{id}', [TransactionController::class, 'show'])->name('transaction.infoTransaction');
     Route::put('/transactionUpdate/{id}', [TransactionController::class, 'update'])->name('transaction.update');
     Route::get('/transactionUpdate/{id}', [TransactionController::class, 'edit'])->name('transaction.editTransaction');
 });
