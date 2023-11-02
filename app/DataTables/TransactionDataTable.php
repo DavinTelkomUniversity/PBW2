@@ -30,7 +30,16 @@ class TransactionDataTable extends DataTable
             return Vehicle::find($data->vehicleId)->name;
         })
         ->editColumn('status', function ($data) {
-            return $data->status;
+            switch ($data->status) {
+                case 1:
+                    return 'Dipinjam';
+                case 2:
+                    return 'Dikembalikan';
+                case 3:
+                    return 'Hilang';
+                default:
+                    return 'Tidak Diketahui';
+            }
         })
             ->editColumn('action', function($data) {
                 return view('transaction.actionTransaction', ['id' => $data->id]);

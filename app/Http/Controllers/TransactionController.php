@@ -19,6 +19,14 @@ class TransactionController extends Controller
         return $dataTable->render('transaction.daftarTransaction');
     }
 
+    public function edit($id)
+    {
+        $transaction = Transaction::findOrFail($id);
+        $users = User::all();
+        $vehicles = Vehicle::availableVehicles()->get();
+        return view('transaction.editTransaction', compact('transaction', 'users', 'vehicles'));
+    }
+
     public function create()
     {
         $users = User::all();
@@ -63,5 +71,36 @@ class TransactionController extends Controller
 
         return redirect()->route('transaction.registrasi')->with('success', 'Transaction berhasil ditambahkan!');
     }
+
+    public function update(Request $request, $id)
+{
+    $validator = Validator::make($request->all(), [
+        'status' => 'required|in:1,2,3', 
+    ]);
+
+    if ($validator->fails()) {
+        return redirect()->route('transaction.editTransaction', $id)
+            ->withErrors($validator)
+            ->withInput();
+    }
+
+    $transaction = Transaction::findOrFail($id);
+
+    $transaction->status = $request->input('status');
+    $transaction->save();
+
+    if ($request->input('status') == 2) {
+        $vehicle = Vehicle::find($transaction->vehicleId);
+        $vehicle->status = 2;
+        $vehicle->save();
+    } elseif ($request->input('status') == 3) {
+        $vehicle = Vehicle::find($transaction->vehicleId);
+        $vehicle->status = 3;
+        $vehicle->save();
+    }
+
+    return redirect()->route('transaction.daftarTransaction')->with('success', 'Transaksi berhasil diperbarui!');
+}
+
     
 }
